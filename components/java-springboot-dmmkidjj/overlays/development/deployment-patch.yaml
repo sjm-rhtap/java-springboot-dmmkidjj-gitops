@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: java-springboot-dmmkidjj
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-tssc/task-runner:1.7
-        name: container-image  
+        - image: quay.io/sjmrhtap/java-springboot-dmmkidjj:3d9773d71984e24c6eae4e4a06d7b0e9eaa61df5@sha256:447ba9839fedbc8ad3997a37f713e862cd79f6cead388151a2a2b754271dd649
+          name: container-image
